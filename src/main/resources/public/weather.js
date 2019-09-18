@@ -5,7 +5,7 @@ $("#btn").click(function(e) {
 	    url: "http://localhost:8080/weather/getData/"+$("#city").val(),
 	    type: 'GET',
 	    success: function(data){ 
-	        $("#TODAY").html("TODAY'S DATE: "+data.today);
+	        $("#today").html("TODAY'S DATE: "+data.today);
 			  $("#cityName").html("CITY NAME: "+data.city);
 			  $("#weatherDesc").html("Overall Weather Description: "+data.weatherDesc);
 			  $("#tempFahr").html("Temperature in Fahrenheit: "+data.tempFahr);
@@ -15,7 +15,7 @@ $("#btn").click(function(e) {
 	    },
 	    error: function(data) {
 	        alert('Error retireving data. Please verify input details. !');
-	        $("#TODAY").html("");
+	        $("#today").html("");
 			  $("#cityName").html("");
 			  $("#weatherDesc").html("");
 			  $("#tempFahr").html("");
